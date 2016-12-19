@@ -5,7 +5,7 @@
  * Time: 5:22 PM
  */
 
-require (dirname(__FILE__) . '/FreshsalesAnalytics.php');
+require(dirname(__FILE__) . '/FreshsalesAnalytics.php');
 
 FreshsalesAnalytics::init(array(
    'domain' =>  "http://localhost.freshsales-dev.com:3000",
@@ -15,10 +15,10 @@ FreshsalesAnalytics::identify(array(
     'identifier' => "john@abc.com",
     'Last name' => "Doe",
     'company' => array(
-    	'Name' => "Sample Company"
+        'Name' => "Sample Company"
     ),
     'deal' => array(
-    	'Name' => "Sample Deal"
+        'Name' => "Sample Deal"
     )
 ));
 FreshsalesAnalytics::trackEvent(array(
@@ -31,4 +31,3 @@ FreshsalesAnalytics::trackPageView(array(
    'identifier' => 'john@abc.com',
     'url' => 'http://www.sample.com'
 ));
-?>

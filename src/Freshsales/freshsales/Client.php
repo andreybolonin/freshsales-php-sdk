@@ -80,13 +80,12 @@ class Client
      * @param array $prop
      * @return stdClass
      */
-    private function convert_array_to_object(array $prop){
+    private function convert_array_to_object(array $prop)
+    {
         $object = new stdClass();
-        foreach ($prop as $key => $value)
-        {
+        foreach ($prop as $key => $value) {
             $object->$key = $value;
         }
         return $object;
     }
-
 }

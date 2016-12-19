@@ -17,7 +17,8 @@ class CurlTransport
      * CurlTransport constructor.
      * @param $properties
      */
-    public function __construct($properties) {
+    public function __construct($properties)
+    {
         $this->domain = $properties['domain'];
         $this->appToken = $properties['app_token'];
     }
@@ -46,7 +47,7 @@ class CurlTransport
         $response  = curl_exec($ch);
         $http_status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
-        if ($http_status != 200){
+        if ($http_status != 200) {
             throw new Exception("Freshsales encountered an error. CODE: " . $http_status . " Response: " . $response);
         }
     }
@@ -61,9 +62,4 @@ class CurlTransport
         $url = $this->domain . '/track/'  . $action;
         return $url;
     }
-
-
-
-
-
 }
